@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hand-written Character Recognition</title>
+</head>
+<body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+    <h1>Hand-written Character Recognition</h1>
+          <hr>
+
+    <form action="http://localhost:9000/predict" method="POST" enctype="multipart/form-data">
+
+    <div class="form-group">
+		<table>
+<tr>
+<td>
+<label>Select image</label>
+</td> 
+<td> <div class="custom-file">
+       <input type="file" class="custom-file-input" name="imagefile" id="imagefile">                
+        </div> </div>
+</td>
+</tr>
+<tr>
+<td> <button type="submit" class="btn-primary">Upload</button></td>
+</tr>
+</table> 
+   
+    </form>
+        </div>
+      </div>
+    </div>
+<div class="container">
+<p> Original Image: </p>
+    <img src="data:image/png;base64,{{ img_data }}" id="img-upload" alt="img_data" class="img-upload"/>
+<p> <label class="custom-file-label" for="image">Image is belong to {{predict_data}}</label> </p>
+</div>
+
+</body>
+</html>
